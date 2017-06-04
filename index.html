@@ -7,8 +7,32 @@
 
 <script language=javascript>
 function redirect(){
-  window.location = "http://abdoupc.ddns.net";
+  ifServerOnline("http://abdoupc.ddns.net/landing1/images/pause.png",function()
+{
+    window.location = "http://abdoupc.ddns.net";//  server online code here
+},
+function ()
+{
+    window.location = "http://abdoupc.ddns.net:3";//  server offline code here
+});
+  
 }
+  function ifServerOnline(imgserver,ifOnline, ifOffline)
+{
+    var img = document.body.appendChild(document.createElement("img"));
+    img.onload = function()
+    {
+        ifOnline && ifOnline.constructor == Function && ifOnline();
+    };
+    img.onerror = function()
+    {
+        ifOffline && ifOffline.constructor == Function && ifOffline();
+    };
+    img.src = imgserver;        
+}
+
+
+
 </script>
 </head>
 <body onload="redirect()">
