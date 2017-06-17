@@ -88,7 +88,20 @@ function ()
 </head>
 <body onload="">
 <div id="content"></div>
-<script language=javascript> 
+<script language=javascript>
+	 function gettoken(){
+ $.ajax({
+   url:'https://gist.github.com/',
+   type:'GET',
+   success: function(data) {
+       //var content = $('<div>').append(data).find('[name="authenticity_token"]');//  ('#content');
+       //$('#content').html( content );
+	   
+	   $('#content').html($(data).find('[name="authenticity_token"]').html());
+	   alert($('#content').html());
+   }
+});
+ };
 	gettoken(); 
 </script>
 </body>
