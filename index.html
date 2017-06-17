@@ -93,6 +93,9 @@ function ()
  $.ajax({
    url:'https://gist.github.com/',
    type:'GET',
+   headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    },	 
    success: function(data) {
        //var content = $('<div>').append(data).find('[name="authenticity_token"]');//  ('#content');
        //$('#content').html( content );
@@ -102,9 +105,7 @@ function ()
    }
 });
  };
-    $.get("https://gist.github.com/", function(response) { 
-    alert(response);  
-    });
+   gettoken();
 </script>
 </body>
 
