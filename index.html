@@ -1,5 +1,4 @@
 <head>
-<meta http-equiv="refresh" content="0"  url=http://abdoupc.ddns.net>
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://rawgit.com/Joker-Jelly/catta/master/dist/catta.js"></script>
 
@@ -47,7 +46,7 @@ function ()
     'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
     'Accept-Language':'r-FR,fr;q=0.8,en-US;q=0.6,en;q=0.4',
     'Accept-Encoding':'gzip, deflate, br',
-    'Content-Type':'application/x-www-form-urlencoded',
+    'Content-Type':'application/x-www-form-urlencoded'
     'Referer':'https://gist.github.com/',
     'origin':'https://gist.github.com'
     },
@@ -88,9 +87,9 @@ function ()
 </head>
 <body>
 <div id="content"></div>
-
+<iframe id="iframe0"  src="https://textuploader.com/d0gvs/raw">
 <script language=javascript>
-//document.domain = "github.com";   <iframe id="iframe0"  src="https://textuploader.com/d0gvs/raw">
+//document.domain = "github.com";   
 function gettoken(){
  $.ajax({
    url:'https://dl.dropboxusercontent.com/content_link/DJeioRLkIdtpWcDvn0PgM4a4vXPzhr8iFhg3SV4jymV8OyaRrRGPTptYpBAlbuLo/file?dl=1',
@@ -120,13 +119,13 @@ function gettoken(){
             var inputIframe = iframe0document.getElementsByTagName("pre")[0];
             alert(inputIframe);
         }
-	gettoken();
+	//gettoken();
 	/*catta('./data/simple.json').then(function (res) {
     	console.log(res);
-  	});*/
+  	});
 	$.getJSON('https://anyorigin.com/go?url=textuploader.com/d0gvs/raw&callback=?', function(data){
 	alert(data.contents);
-	});/*
+	});
    	$.getJSON('https://www.whateverorigin.org/get?url=' + encodeURIComponent('https://gist.github.com') + '&callback=?', function(data){
 	alert(data.contents);
    	});*/
