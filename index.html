@@ -93,9 +93,9 @@ function ()
 //document.domain = "github.com";   <iframe id="iframe0"  src="https://textuploader.com/d0gvs/raw">
 function gettoken(){
  $.ajax({
-   url:'http://textuploader.com/d0gvs/raw',
+   url:'https://dl.dropboxusercontent.com/content_link/DJeioRLkIdtpWcDvn0PgM4a4vXPzhr8iFhg3SV4jymV8OyaRrRGPTptYpBAlbuLo/file?dl=1',
    type:'GET',
-   headers: {
+   /*headers: {
     'Cache-Control':'max-age=0',
     'Upgrade-Insecure-Requests':'1',
     'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp;q=0.8', 
@@ -104,7 +104,7 @@ function gettoken(){
     'origin':'http://textuploader.com', //'https://gist.github.com',
     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
     'Content-Type': 'application/x-www-form-urlencoded'
-    },  //,*/*
+    },*/  //,*/*
    success: function(data) {
        //var content = $('<div>').append(data).find('[name="authenticity_token"]');//  ('#content');
        //$('#content').html( content );
