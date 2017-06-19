@@ -121,6 +121,22 @@ function getoken(){
 	    var inputIframe = iframe0document.getElementsByTagName("body")[0];
             alert(inputIframe);
         }
+	window.addEventListener('message', receivemessage, false);
+    function receivemessage(event) { 
+
+    // IMPORTANT: Check the origin of the data! 
+    if (~event.origin.indexOf('abdouwebsite.000webhost.com')) { 
+        // The data has been sent from your site 
+
+        // The data sent with postMessage is stored in event.data 
+        console.log(event.data); 
+        alert (event.data); 
+    } else { 
+        // The data hasn't been sent from your site! 
+        // Be careful! Do not use it. 
+          console.log("error"); 
+         return; 
+    } 
 	//getIframeText();
 	/*catta('./data/simple.json').then(function (res) {
     	console.log(res);
