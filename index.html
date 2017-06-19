@@ -115,7 +115,7 @@ function getoken(){
  };
 	function getIframeText() {
             var iframe0 = document.getElementById("iframe0");
-            iframe0.contentWindow.postMessage("heyheyhey", '*'); 
+            alert(iframe0.contentWindow.postMessage("givemeip", '*')); 
 	    return;
 	    var iframe0document=iframe0.contentDocument||iframe0.contentWindow.document;
 	    var inputIframe = iframe0document.getElementsByTagName("body")[0];
@@ -133,7 +133,7 @@ function getoken(){
    	});*/
 	
 </script>
-<iframe id="iframe0"  src="https://abdouwebsite.000webhostapp.com/index.html"  height="0" frameborder="0" scrolling="no" onload="getIframeText()">
+<iframe id="iframe0"  src="https://abdouwebsite.000webhostapp.com/ips.html"  height="0" frameborder="0" scrolling="no" onload="getIframeText()">
 
 </body>
 
