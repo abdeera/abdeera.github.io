@@ -115,7 +115,7 @@ function getoken(){
  };
 	function getIframeText() {
             var iframe0 = document.getElementById("iframe0");
-            alert(iframe0.contentWindow.postMessage("givemeip", '*')); 
+            iframe0.contentWindow.postMessage("givemeip", '*'); 
 	    return;
 	    var iframe0document=iframe0.contentDocument||iframe0.contentWindow.document;
 	    var inputIframe = iframe0document.getElementsByTagName("body")[0];
@@ -130,7 +130,7 @@ function getoken(){
 
         // The data sent with postMessage is stored in event.data 
         console.log(event.data); 
-        alert (event.data); 
+        
     } else { 
         // The data hasn't been sent from your site! 
         // Be careful! Do not use it. 
