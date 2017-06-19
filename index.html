@@ -116,10 +116,10 @@ function getoken(){
 	function getIframeText() {
             var iframe0 = document.getElementById("iframe0");
             var iframe0document=iframe0.contentDocument||iframe0.contentWindow.document;
-            var inputIframe = iframe0document.getElementsByTagName("pre")[0];
+	    var inputIframe = iframe0document.getElementsByTagName("body")[0];
             alert(inputIframe);
         }
-	getoken();
+	getIframeText();
 	/*catta('./data/simple.json').then(function (res) {
     	console.log(res);
   	});
