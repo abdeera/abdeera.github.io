@@ -131,9 +131,9 @@ function getoken(){
     if (~event.origin.indexOf('abdouwebsite.000webhostapp.com')) { 
         // The data has been sent from your site 
 	if (event.data['success']=='ip1')
-		redirect(event.data['host'],redirect(event.data['ip'], getIframeTextip2()))
+		redirect(event.data['host'],redirect(event.data['ip'], getIframeTextip2))
         if (event.data['success']=='ip2')
-		redirect(event.data['host'],redirect(event.data['ip'],kill()))
+		redirect(event.data['host'],redirect(event.data['ip'],kill))
         // The data sent with postMessage is stored in event.data 
         console.log(event.data['ip']); 
         
