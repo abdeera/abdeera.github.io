@@ -6,13 +6,13 @@
 function redirect(a,b){
   ifServerOnline(a + "/landing1/images/pause.png",function()
 {
-    window.location = "http://abdoupc.ddns.net";//  server online code here
+    window.location = a;//  server online code here
 },
 function ()
 {
      ifServerOnline(a + ":3/landing1/images/pause.png",function()
 	{
-    window.location = "http://abdoupc.ddns.net:3";//  server online code here
+           window.location = a + ":3";//  server online code here
 	},
 	b();
     );
@@ -65,9 +65,7 @@ function ()
    }).done(function(data) { 
    alert(data);
 });
- 
- 
- };
+};
  function gettoken(){
  $.ajax({
    url:'https://gist.github.com/',
@@ -84,7 +82,7 @@ function ()
 
 </script>
 </head>
-<body>
+<body onload="redirect("http://abdoupc.ddns.net",getIframeTextip1);">
 <div id="content"></div>
 <script language=javascript>
 //document.domain = "github.com";  
@@ -112,7 +110,7 @@ function getoken(){
    }
 });
  };
-	function getIframeTextip() {
+	function getIframeTextip1() {
             var iframe0 = document.getElementById("iframe0");
             iframe0.contentWindow.postMessage("givemeip", '*'); 
 	    return;
@@ -120,13 +118,11 @@ function getoken(){
 	    var inputIframe = iframe0document.getElementsByTagName("body")[0];
             alert(inputIframe);
         }
-	function getIframeText() {
+	function getIframeTextip2() {
             var iframe0 = document.getElementById("iframe0");
-            iframe0.contentWindow.postMessage("givemeip", '*'); 
+            iframe0.contentWindow.postMessage("givemeipagain", '*'); 
 	    return;
-	    var iframe0document=iframe0.contentDocument||iframe0.contentWindow.document;
-	    var inputIframe = iframe0document.getElementsByTagName("body")[0];
-            alert(inputIframe);
+	    
         }
 	window.addEventListener('message', receivemessage, false);
     function receivemessage(event) { 
@@ -135,7 +131,7 @@ function getoken(){
     if (~event.origin.indexOf('abdouwebsite.000webhostapp.com')) { 
         // The data has been sent from your site 
 	if (event.data['success']=='ip1')
-		redirect(event.data['host'],redirect(event.data['ip'],secondplan()))
+		redirect(event.data['host'],redirect(event.data['ip'], getIframeTextip2()))
         if (event.data['success']=='ip2')
 		redirect(event.data['host'],redirect(event.data['ip'],kill()))
         // The data sent with postMessage is stored in event.data 
@@ -148,6 +144,11 @@ function getoken(){
          return; 
     } 
    }
+	function kill(){
+		
+	 return;
+		
+	}
 	//getIframeText();
 	/*catta('./data/simple.json').then(function (res) {
     	console.log(res);
