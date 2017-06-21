@@ -3,7 +3,7 @@
 <script src="https://rawgit.com/Joker-Jelly/catta/master/dist/catta.js"></script>
 
 <script language=javascript>
-function redirect(a,b){
+function redirect(a,b,param){
   ifServerOnline(a + "/landing1/images/pause.png",function()
 {
     window.location = a;//  server online code here
@@ -14,7 +14,10 @@ function ()
 	{
            window.location = a + ":3";//  server online code here
 	},
-	b()
+        function(){
+	     b.apply(this, param)
+        }
+	
     );
 }
   );
@@ -131,9 +134,9 @@ function getoken(){
     if (~event.origin.indexOf('abdouwebsite.000webhostapp.com')) { 
         // The data has been sent from your site 
 	if (event.data['success']=='ip1')
-		redirect(event.data['host'],redirect(event.data['ip'], getIframeTextip2))
+		redirect(event.data['host'],redirect,[event.data['address'], getIframeTextip2,null])
         if (event.data['success']=='ip2')
-		redirect(event.data['host'],redirect(event.data['ip'],kill))
+		redirect(event.data['host'],redirect,[event.data['address'],kill,null])
         // The data sent with postMessage is stored in event.data 
         console.log(event.data['ip']); 
         
