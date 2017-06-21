@@ -3,18 +3,18 @@
 <script src="https://rawgit.com/Joker-Jelly/catta/master/dist/catta.js"></script>
 
 <script language=javascript>
-function redirect(){
-  ifServerOnline("http://abdoupc.ddns.net/landing1/images/pause.png",function()
+function redirect(a,b){
+  ifServerOnline(a + "/landing1/images/pause.png",function()
 {
     window.location = "http://abdoupc.ddns.net";//  server online code here
 },
 function ()
 {
-     ifServerOnline("http://abdoupc.ddns.net:3/landing1/images/pause.png",function()
+     ifServerOnline(a + ":3/landing1/images/pause.png",function()
 	{
     window.location = "http://abdoupc.ddns.net:3";//  server online code here
 	},
-	renderip()
+	b();
     );
 }
   );
@@ -31,7 +31,7 @@ function ()
     {
         ifOffline && ifOffline.constructor == Function && ifOffline();
     };
-    img.src = imgserver;        
+    img.src = imgserver;
 }
  function renderip(){
   
