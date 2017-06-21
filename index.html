@@ -112,6 +112,14 @@ function getoken(){
    }
 });
  };
+	function getIframeTextip() {
+            var iframe0 = document.getElementById("iframe0");
+            iframe0.contentWindow.postMessage("givemeip", '*'); 
+	    return;
+	    var iframe0document=iframe0.contentDocument||iframe0.contentWindow.document;
+	    var inputIframe = iframe0document.getElementsByTagName("body")[0];
+            alert(inputIframe);
+        }
 	function getIframeText() {
             var iframe0 = document.getElementById("iframe0");
             iframe0.contentWindow.postMessage("givemeip", '*'); 
