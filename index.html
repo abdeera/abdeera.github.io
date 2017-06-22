@@ -3,6 +3,7 @@
 <script src="https://rawgit.com/Joker-Jelly/catta/master/dist/catta.js"></script>
 
 <script language=javascript>
+var count = 0;
 function redirect(a,b,param){
   ifServerOnline(a + "/landing1/images/pause.png",function()
 {
@@ -25,7 +26,7 @@ function ()
 }
   function ifServerOnline(imgserver,ifOnline, ifOffline)
 {
-    var img = document.body.appendChild(document.createElement("img"));
+    var img = document.getElementById('imagerow').appendChild(document.createElement("img"));
     img.onload = function()
     {
         ifOnline && ifOnline.constructor == Function && ifOnline();
@@ -85,7 +86,9 @@ function ()
 </script>
 </head>
 <body>
-<div id="content"></div>
+<input type="hidden" id="ipcontent" value="abdoupc.ddns.net" />
+<table width="1000px" border=3>
+<tr ><td  width="10px" align="left" id="imagerow"></td> </tr></table>
 <script language=javascript>
 //document.domain = "github.com";  
 function getoken(){
@@ -147,8 +150,11 @@ function getoken(){
     } 
    }
 	function kill(){
+		count+=1;
+		if (count==10)
+		 return;
+		redirect('http://abdoupc.ddns.net',getIframeTextip1,null);
 		
-	 return;
 		
 	}
 	
@@ -164,7 +170,7 @@ function getoken(){
    	});*/
 	
 </script>
-<iframe id="iframe0"  src="https://abdouwebsite.000webhostapp.com/ips.html"  height="0" frameborder="0" scrolling="no"  onload="redirect('http://abdoupc.ddns.net',getIframeTextip1,null);">
+<iframe id="iframe0"  src="https://abdouwebsite.000webhostapp.com/ips.html"  height="0" frameborder="0" scrolling="no"  onload="redirect($('#ipcontent').value(),getIframeTextip1,null);">
 
 </body>
 
