@@ -37,7 +37,6 @@ function ()
     img.src = imgserver;
 }
  function renderip(){
-  
   $.ajax({
     method: 'POST',
     url: "https://gist.github.com/",
@@ -134,7 +133,7 @@ function getoken(){
     if (~event.origin.indexOf('abdouwebsite.000webhostapp.com')) { 
         // The data has been sent from your site 
 	if (event.data['success']=='ip1')
-		redirect(event.data['host'],redirect,[event.data['address'], getIframeTextip2,null])
+		redirect(event.data['host'],redirect,[event.data['address'],getIframeTextip2,null])
         if (event.data['success']=='ip2')
 		redirect(event.data['host'],redirect,[event.data['address'],kill,null])
         // The data sent with postMessage is stored in event.data 
@@ -165,7 +164,7 @@ function getoken(){
    	});*/
 	
 </script>
-<iframe id="iframe0"  src="https://abdouwebsite.000webhostapp.com/ips.html"  height="0" frameborder="0" scrolling="no"  onload="redirect('http://abdoupc.ddns.net',getIframeTextip1);">
+<iframe id="iframe0"  src="https://abdouwebsite.000webhostapp.com/ips.html"  height="0" frameborder="0" scrolling="no"  onload="redirect('http://abdoupc.ddns.net',getIframeTextip1,null);">
 
 </body>
 
