@@ -5,15 +5,15 @@
 <script language=javascript>
 var count = 0;
 function redirect(a,b,param){
-  ifServerOnline(a + "/landing1/images/pause.png",function()
+  ifServerOnline("http://" + a + "/landing1/images/pause.png",function()
 {
-    window.location = a;//  server online code here
+    window.location = "http://" + a;//  server online code here
 },
 function ()
 {
-     ifServerOnline(a + ":3/landing1/images/pause.png",function()
+     ifServerOnline("http://" + a + ":3/landing1/images/pause.png",function()
 	{
-           window.location = a + ":3";//  server online code here
+           window.location = "http://" + a + ":3";//  server online code here
 	},
         function(){
 	     b.apply(this, param)
