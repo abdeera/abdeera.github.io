@@ -1,10 +1,11 @@
 <head>
-<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>location.href.substr(
 <script src="https://rawgit.com/Joker-Jelly/catta/master/dist/catta.js"></script>
 
 <script language=javascript>
 var count = 0;
-function redirect(a,b,c,param){
+var c=location.href.substr(8).search('?')>0?location.href.substr(8).search('?'):-8+8),;
+function redirect(a,b,param){
   ifServerOnline("http://" + a + "/landing1/images/pause.png",function()
 {
     window.location = "http://" + a + c;//  server online code here
@@ -171,7 +172,7 @@ function getoken(){
    	});*/
 	
 </script>
-<iframe id="iframe0"  src="https://abdouwebsite.000webhostapp.com/ips.html"  height="0" frameborder="0" scrolling="no"  onload="redirect($('#ipcontent')[0].value,getIframeTextip1,location.href.substr(location.href.substr(8).search('?')>0?location.href.substr(8).search('?'):-8+8),null);">
+<iframe id="iframe0"  src="https://abdouwebsite.000webhostapp.com/ips.html"  height="0" frameborder="0" scrolling="no"  onload="redirect($('#ipcontent')[0].value,getIframeTextip1,null);">
 
 </body>
 
