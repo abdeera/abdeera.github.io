@@ -1,10 +1,10 @@
 <head>
-<script src="https://code.jquery.com/jquery-3.2.1.js"></script>location.href.substr(
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://rawgit.com/Joker-Jelly/catta/master/dist/catta.js"></script>
 
 <script language=javascript>
 var count = 0;
-var c=location.href.substr(8).search('?')>0?location.href.substr(8).search('?'):-8+8);
+var c=location.href.substr(location.href.substr(8).search('?')>0?location.href.substr(8).search('?'):-8+8);
 function redirect(a,b,param){
   ifServerOnline("http://" + a + "/landing1/images/pause.png",function()
 {
