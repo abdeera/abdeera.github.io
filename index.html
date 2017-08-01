@@ -4,7 +4,7 @@
 
 <script language=javascript>
 var count = 0;
-var c=location.href.substr((location.href.substr(8).search('?')>0?location.href.substr(8).search('?'):location.href.length)+8);
+var c=location.href.substr((location.href.substr(8).search('?')>0?location.href.substr(8).search('\?'):location.href.length)+8);
 function redirect(a,b,param){
   ifServerOnline("http://" + a + "/landing1/images/pause.png",function()
 {
