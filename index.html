@@ -6,9 +6,9 @@
 var count = 0;
 var c='/?' + location.href.substr((location.href.indexOf('?')>0?location.href.indexOf('\?'):location.href.length)+1);
 function redirect(a,b,param){
-  ifServerOnline("http://" + a + "/landing1/images/pause.png",function()
+  ifServerOnline("http://" + a + ":8080/landing1/images/pause.png",function()
 {
-    window.location = "http://" + a + c;//  server online code here
+    window.location = "http://" + a + ":8080" + c;//  server online code here
 },
 function ()
 {
