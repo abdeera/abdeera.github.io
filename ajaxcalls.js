@@ -13,9 +13,7 @@ function getuser(){
      'Origin':'https://api.github.com',
      'Referer':'https://github.com/',
      'Content-Type': 'text/html;application/json;charset=UTF-8',
-     'DNT':'1',
-     'Access-Control-Allow-Origin':'*'
-     }		      
+     'DNT':'1'}		      
  
    }).done(function(data) { 
    alert(data);
