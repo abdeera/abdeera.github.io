@@ -16,7 +16,7 @@ function getuser(){
      'Access-Control-Allow-Headers': 'Content-Type, Content-Range, Content-Disposition, Content-Description',
      'Access-Control-Max-Age': '1728000'
       }		      
- }
+ 
    }).done(function(data) { 
    alert(data);
 });
