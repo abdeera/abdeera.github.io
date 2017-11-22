@@ -14,7 +14,10 @@ function getuser(){
      'Origin':'https://api.github.com',
      'Referer':'https://github.com/',
      'Content-Type': 'text/html;application/json;charset=UTF-8',
-     'DNT':'1'
+     'DNT':'1',
+     'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
      }		      
  
    }).done(function(data) { 
