@@ -2,7 +2,7 @@ function getuser(){
 
  $.ajax({
     method: 'GET',
-    url: "https://crossorigin.me/https://api.github.com/user",
+    url: "https://api.github.com/user",
     headers: {
      'Host': 'api.github.com',
      'Connection': 'keep-alive',
