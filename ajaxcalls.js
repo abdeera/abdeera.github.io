@@ -10,10 +10,10 @@ function getuser(){
      'Upgrade-Insecure-Requests':'1',
      'Accept':'text/html,',
      'Accept-Language':'r-FR,fr;q=0.8,en-US;q=0.6,en;q=0.4',
-     'Accept-Encoding': gzip, deflate, sdch, br
+     'Accept-Encoding': 'gzip, deflate, sdch, br',
 
      'Content-Type': 'text/html,application/json;charset=UTF-8',
-     DNT: 1
+     'DNT':'1'
      }		      
  
    }).done(function(data) { 
