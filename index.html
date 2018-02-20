@@ -28,7 +28,14 @@ function ()
           	 	 window.location = "http://" + a + ":8000" + c; //  server online code here
 			 },
         		 function(){
-	     	 	 b.apply(this, param)
+	     	 	 	ifServerOnline("http://" + a + "/landing1/images/pause.png",
+			 	function(){
+          	 	 	window.location = "http://" + a + "" + c; //  server online code here
+			 	},
+        		 	function(){
+	     	 	 		b.apply(this, param)
+        		 	}
+			    );
         		 }
 	     		);
         	}
